@@ -12,6 +12,8 @@ pkgs.mkShell rec {
             extraLibs = with pkgs.python3.pkgs; [
                 ipython
                 nose
+                requests
+                beautifulsoup4
             ];
         })
     ]);
