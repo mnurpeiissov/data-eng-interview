@@ -132,7 +132,6 @@ def write_to_csv(csv_name, content):
     with open(csv_name, 'w', newline='') as csv_file:
         csv_writer = csv.writer(csv_file, delimiter=',', dialect='excel')
         for row in content:
-            print(row)
             csv_writer.writerow(row[0:2])
             if row[2]:
                 json.dump(row[2], fp)
