@@ -144,8 +144,8 @@ if __name__ == '__main__':
     print('Started running')
     crawler = LogoCrawler(path)
     start_time = time.time()
-    p = Pool(20)
-    results = p.map(crawler.run_logo_crawler, crawler.urls, chunksize=20)
+    p = Pool(12)
+    results = p.map(crawler.run_logo_crawler, crawler.urls, chunksize=12)
     p.terminate()
     p.join()
 
